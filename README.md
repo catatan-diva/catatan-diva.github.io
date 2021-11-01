@@ -293,6 +293,169 @@ console.log(result);
 
 ```
 
+## Slasher Flick <a name="slasher-flick"></a>
+
+```
+function slasher(arr, howMany) {
+  arr.splice(0, howMany);
+  return arr;
+}
+
+const result = slasher([1, 2, 3], 2);
+console.log(result);
+// [ 3 ]
+
+```
+
+## Mutations <a name="mutations"></a>
+
+```
+function mutation(arr) {
+  const firstWord = arr[0].toLowerCase();
+  const secondWord = arr[1].toLowerCase();
+
+  for (let i = 0; i < secondWord.length; i++) {
+    if (firstWord.indexOf(secondWord[i]) === -1) return false;
+  }
+
+  return true;
+}
+
+const result = mutation(['hello', 'hey']);
+console.log(result);
+// false
+
+function mutation(arr) {
+  const firstWord = arr[0].toLowerCase();
+  const secondWord = arr[1].toLowerCase();
+
+  for (let i = 0; i < secondWord.length; i++) {
+    if (!firstWord.includes(secondWord[i])) return false;
+  }
+
+  return true;
+}
+
+const result = mutation(['hello', 'hey']);
+console.log(result);
+// false
+
+```
+
+## Falsy Bouncer <a name="falsy-bouncer"></a>
+
+```
+function bouncer(arr) {
+  let truthies = [];
+  for (let elem of arr) {
+    if (elem) truthies.push(elem);
+  }
+  return truthies;
+}
+
+const result = bouncer([7, 'ate', '', false, 9]);
+console.log(result);
+// [ 7, 'ate', 9 ]
+
+
+function bouncer(arr) {
+  return arr.filter((elem) => elem);
+}
+
+const result = bouncer([7, 'ate', '', false, 9]);
+console.log(result);
+// [ 7, 'ate', 9 ]
+
+```
+
+## Seek and Destroy <a name="seek-and-destroy"></a>
+
+```
+function destroyer(arr) {
+  let args = Array.from(arguments);
+  args.splice(0, 1);
+  const targets = args;
+  let result = [];
+  for (let num of arr) {
+    if (targets.indexOf(num) === -1) result.push(num);
+  }
+
+  return result;
+}
+
+const result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(result);
+// [ 1, 1 ]
+
+
+function destroyer(arr) {
+  let args = Array.from(arguments);
+  args.splice(0, 1);
+  const targets = args;
+
+  return arr.filter((num) => args.indexOf(num) === -1);
+}
+
+const result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(result);
+// [ 1, 1 ]
+
+```
+
+## Where do I Belong <a name="where-do-i-belong"></a>
+
+```
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i++) {
+    if (num <= arr[i]) {
+      return i;
+    }
+  }
+  return arr.length;
+}
+
+const result = getIndexToIns([40, 60], 50);
+console.log(result);
+// 1
+```
+
+## Caesars Chiper <a name="caesars-chiper"></a>
+
+```
+function rot13(str) {
+  let solved = '';
+  for (let i = 0; i < str.length; i++) {
+    let asciiNum = str[i].charCodeAt();
+    if (asciiNum >= 65 && asciiNum <= 77) {
+      solved += String.fromCharCode(asciiNum + 13);
+    } else if (asciiNum >= 78 && asciiNum <= 90) {
+      solved += String.fromCharCode(asciiNum - 13);
+    } else {
+      solved += str[i];
+    }
+  }
+  return solved;
+}
+
+const result = rot13('AB YZ');
+console.log(result);
+// NO LM
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
 ## <a name=""></a>
 
 ```
