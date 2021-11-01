@@ -109,39 +109,187 @@ console.log(result);
 // 6
 ```
 
-## <a name=""></a>
+## Title Case a Sentence <a name="title-case-a-sentence"></a>
+
+```
+function titleCase(str) {
+  const words = str.toLowerCase().split(' ');
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+  return words.join(' ');
+}
+
+const result = titleCase("I'm a litte tea pot");
+console.log(result);
+// I'm A Litte Tea Pot
+
+function titleCase(str) {
+  const titled = str
+    .toLowerCase()
+    .split(' ')
+    .map((elem) => elem[0].toUpperCase() + elem.slice(1));
+  return titled.join(' ');
+}
+
+const result = titleCase("I'm a litte tea pot");
+console.log(result);
+// I'm A Litte Tea Pot
 
 ```
 
-```
-
-## <a name=""></a>
+## Return Largest Numbers in Arrays <a name="return-largest-numbers-in-arrays"></a>
 
 ```
+function largestOfFour(arr) {
+  let maxes = [];
+  for (let i = 0; i < arr.length; i++) {
+    let tempMax = arr[i][0];
+    for (let j = 0; j < arr[i].length; j++) {
+      if (tempMax < arr[i][j]) tempMax = arr[i][j];
+    }
+    maxes.push(tempMax);
+  }
+  return maxes;
+}
+
+const result = largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+]);
+console.log(result);
+// [ 5, 27, 39, 1001 ]
+
+
+function largestOfFour(arr) {
+  let maxes = [0, 0, 0, 0];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (maxes[i] < arr[i][j]) maxes[i] = arr[i][j];
+    }
+  }
+  return maxes;
+}
+
+const result = largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+]);
+console.log(result);
+// [ 5, 27, 39, 1001 ]
+
 
 ```
 
-## <a name=""></a>
+## Confirm the Ending <a name="confirm-the-ending"></a>
 
 ```
+function confirmEnding(str, target) {
+  return str.endsWith(target);
+}
 
+const result = confirmEnding('Bastian', 'n');
+console.log(result);
+// true
+
+function confirmEnding(str, target) {
+  return str.substr(-target.length) === target;
+}
+
+const result = confirmEnding('Bastian', 'n');
+console.log(result);
+// true
 ```
 
-## <a name=""></a>
+## Repeat a String Repeat a String <a name="repeat-a-string-repeat-a-string"></a>
 
 ```
+function repeatStringNumTimes(str, num) {
+  if (num < 0) return '';
 
+  return str.repeat(num);
+}
+
+const result = repeatStringNumTimes('abc', 3);
+console.log(result);
+// abcabcabc
+
+function repeatStringNumTimes(str, num) {
+  if (num < 0) return '';
+  let final = '';
+  for (let i = 0; i < num; i++) {
+    final += str;
+  }
+  return final;
+}
+
+const result = repeatStringNumTimes('abc', 3);
+console.log(result);
+// abcabcabc
+
+function repeatStringNumTimes(str, num) {
+  if (num < 1) return '';
+  return str + repeatStringNumTimes(str, num - 1);
+}
+
+const result = repeatStringNumTimes('abc', 3);
+console.log(result);
+// abcabcabc
 ```
 
-## <a name=""></a>
+## Truncate a String <a name="truncate-a-string"></a>
 
 ```
+function truncateString(str, num) {
+  if (num >= str.length) return str;
+  if (num <= 3) return str.slice(0, num) + '...';
+  return str.slice(0, num - 3) + '...';
+}
 
+const result = truncateString(
+  'A-tisket a-tasket A green and yellow basket',
+  11
+);
+console.log(result);
+// A-tisket...
 ```
 
-## <a name=""></a>
+## Chunky Monkey <a name="chunky-monkey"></a>
 
 ```
+function chunkArrayInGroups(arr, size) {
+  let groups = [];
+
+  while (arr.length > 0) {
+    groups.push(arr.slice(0, size));
+    arr = arr.slice(size);
+  }
+
+  return groups;
+}
+
+const result = chunkArrayInGroups(['a', 'b', 'c', 'd', 'e', 'f'], 2);
+console.log(result);
+// [ [ 'a', 'b' ], [ 'c', 'd' ], [ 'e', 'f' ] ]
+
+
+function chunkArrayInGroups(arr, size) {
+  let groups = [];
+
+  while (arr.length > 0) {
+    groups.push(arr.splice(0, size));
+  }
+
+  return groups;
+}
+
+const result = chunkArrayInGroups(['a', 'b', 'c', 'd', 'e', 'f'], 2);
+console.log(result);
+// [ [ 'a', 'b' ], [ 'c', 'd' ], [ 'e', 'f' ] ]
 
 ```
 

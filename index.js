@@ -1,6 +1,13 @@
-function findLongestWord(str) {
-  return str.split(' ').sort((a, b) => b.length - a.length)[0].length;
+function chunkArrayInGroups(arr, size) {
+  let groups = [];
+
+  while (arr.length > 0) {
+    groups.push(arr.splice(0, size));
+  }
+
+  return groups;
 }
 
-const result = findLongestWord('The quick brown fox jumped over the lazy dog');
+const result = chunkArrayInGroups(['a', 'b', 'c', 'd', 'e', 'f'], 2);
 console.log(result);
+// [ [ 'a', 'b' ], [ 'c', 'd' ], [ 'e', 'f' ] ]
