@@ -1,7 +1,6 @@
-function factorialize(num) {
-  if (num === 1) return 1;
-  return num * factorialize(num - 1);
+function findLongestWord(str) {
+  return str.split(' ').sort((a, b) => b.length - a.length)[0].length;
 }
 
-const result = factorialize(2);
+const result = findLongestWord('The quick brown fox jumped over the lazy dog');
 console.log(result);

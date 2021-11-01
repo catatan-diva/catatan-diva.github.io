@@ -51,16 +51,46 @@ console.log(result);
 // 2
 ```
 
-# 
+# Check for Palindrome
 
 ```
+function palindrome(str) {
+  const reg = /[\W_]/g;
+  const smallStr = str.toLowerCase().replace(reg, '');
+  const reversed = smallStr.split('').reverse().join('');
+  if (reversed === smallStr) return true;
 
+  return false;
+}
+
+const result = palindrome('eye');
+console.log(result);
+// true
 ```
 
-# 
+# Find the Longest word in a string
 
 ```
+function findLongestWord(str) {
+  const words = str.split(' ');
+  let longest = '';
+  for (const word of words) {
+    if (word.length > longest.length) longest = word;
+  }
+  return longest.length;
+}
 
+const result = findLongestWord('The quick brown fox jumped over the lazy dog');
+console.log(result);
+// 6
+
+function findLongestWord(str) {
+  return str.split(' ').sort((a, b) => b.length - a.length)[0].length;
+}
+
+const result = findLongestWord('The quick brown fox jumped over the lazy dog');
+console.log(result);
+// 6
 ```
 
 # 
