@@ -444,25 +444,62 @@ console.log(result);
 
 ```
 
-## <a name=""></a>
+## Sum All The Numbers In Range <a name="sum-all-the-numbers-in-range"></a>
+
+```
+function sumAll(arr) {
+  const start = Math.min(arr[0], arr[1]);
+  const end = Math.max(arr[0], arr[1]);
+  let total = 0;
+
+  for (let i = start; i <= end; i++) {
+    total += i;
+  }
+  return total;
+}
+
+const result = sumAll([1, 4]);
+console.log(result);
+// 10
 
 ```
 
-```
-
-## <a name=""></a>
+## Diff Two Arrays <a name="diff-two-arrays"></a>
 
 ```
+function diffArray(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) === -1) result.push(arr1[1]);
+  }
+
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) === -1) result.push(arr2[j]);
+  }
+
+  return result;
+}
+
+const result = diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+console.log(result);
+// [ 4 ]
+
+function diffArray(arr1, arr2) {
+  let combo = arr1.concat(arr2);
+  return combo.filter((num) => {
+    if (arr1.indexOf(num) === -1 || arr2.indexOf(num) === -1) {
+      return num;
+    }
+  });
+}
+
+const result = diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+console.log(result);
+// [ 4 ]
 
 ```
 
-## <a name=""></a>
-
-```
-
-```
-
-## <a name=""></a>
+## Roman Numeral Converter <a name="roman-numeral-converter"></a>
 
 ```
 
