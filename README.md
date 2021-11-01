@@ -1,4 +1,20 @@
-# Reverse A String
+# Table of Contents
+- [Reverse A String](#reverse-a-string)
+- [Factorialize A Number](#factorialize-a-number)
+- [Check for Palindrome](#check-for-palindrome)
+- [Find the Longest word in a string](#find-the-longest-word-in-a-string)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+
+## Reverse A String <a name="reverse-a-string"></a>
 
 ```
 function reverseString(str) {
@@ -26,7 +42,7 @@ console.log(result);
 // olleh
 ```
 
-# Factorialize A Number
+## Factorialize A Number <a name="factorialize-a-number"></a>
 
 ```
 function factorialize(num) {
@@ -51,7 +67,7 @@ console.log(result);
 // 2
 ```
 
-# Check for Palindrome
+## Check for Palindrome <a name="check-for-palindrome"></a>
 
 ```
 function palindrome(str) {
@@ -68,7 +84,7 @@ console.log(result);
 // true
 ```
 
-# Find the Longest word in a string
+## Find the Longest word in a string <a name="find-the-longest-word-in-a-string"></a>
 
 ```
 function findLongestWord(str) {
@@ -93,19 +109,61 @@ console.log(result);
 // 6
 ```
 
-# 
+## <a name=""></a>
 
 ```
 
 ```
 
-# 
+## <a name=""></a>
 
 ```
 
 ```
 
-# 
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
+
+```
+
+```
+
+## <a name=""></a>
 
 ```
 
