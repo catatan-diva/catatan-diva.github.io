@@ -3,15 +3,21 @@
 - [Factorialize A Number](#factorialize-a-number)
 - [Check for Palindrome](#check-for-palindrome)
 - [Find the Longest word in a string](#find-the-longest-word-in-a-string)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+- [Title Case a Sentence](#title-case-a-sentence)
+- [Return Largest Numbers in Arrays](#return-largest-numbers-in-arrays)
+- [Confirm the Ending](#confirm-the-ending)
+- [Repeat a String Repeat a String](#repeat-a-string-repeat-a-string)
+- [Truncate a String](#truncate-a-string)
+- [Chunky Monkey](#chunky-monkey)
+- [Slasher Flick](#slasher-flick)
+- [Mutations](#mutations)
+- [Falsy Bouncer](#falsy-bouncer)
+- [Seek and Destroy](#seek-and-destroy)
+- [Where do I Belong](#where-do-i-belong)
+- [Caesars Chiper](#caesars-chiper)
+- [Sum All The Numbers In Range](#sum-all-the-numbers-in-range)
+- [Diff Two Arrays](#diff-two-arrays)
+- [Roman Numeral Converter](#roman-numeral-converter)
 - [](#)
 
 ## Reverse A String <a name="reverse-a-string"></a>
@@ -533,12 +539,6 @@ function convertToRoman(num) {
 const result = convertToRoman(8);
 console.log(result);
 // VIII
-
-```
-
-## <a name=""></a>
-
-```
 
 ```
 
